@@ -1,34 +1,36 @@
-class AiSkills < Formula
+class AiSkillsAT010 < Formula
   desc "CLI tool for managing AI coding agent skills across multiple agents"
   homepage "https://github.com/kevin-lee/ai-skills"
-  version "2.0.0"
+  version "0.1.0"
   license "MIT"
+
+  keg_only :versioned_formula
 
   on_macos do
     on_arm do
       on_tahoe :or_newer do
         url "https://github.com/kevin-lee/ai-skills/releases/download/v#{version}/aiskills-macos-26-arm64"
-        sha256 "92637bf4d418a9045198ad9ca5e9f40ca9f4457b9940bb4e3acc75c07c18b46f"
+        sha256 "b53f9446bc8547f1944d338f4f57b76e83f9d5e8d18ef256dc2377560f84f15b"
       end
       on_sequoia :or_older do
         url "https://github.com/kevin-lee/ai-skills/releases/download/v#{version}/aiskills-macos-15-arm64"
-        sha256 "1a0a85ba15517c5f2f921cc111f87b6e32830861673397e39fd04107df204e42"
+        sha256 "b4c63421971833a2ed48ac688ec7163e1f52eaf4c333ecf94a91b097a0339f69"
       end
     end
     on_intel do
       url "https://github.com/kevin-lee/ai-skills/releases/download/v#{version}/aiskills-macos-15-arm64"
-      sha256 "1a0a85ba15517c5f2f921cc111f87b6e32830861673397e39fd04107df204e42"
+      sha256 "b4c63421971833a2ed48ac688ec7163e1f52eaf4c333ecf94a91b097a0339f69"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/kevin-lee/ai-skills/releases/download/v#{version}/aiskills-linux-arm64"
-      sha256 "f35970efe7b86aa4b6a4bb71409a497820cf961bbafbbf8b0405010ae9fbc710"
+      sha256 "b2eb7c543b89af678b96017d481972b6ec84c5769f7c34779ac7c73498eecc7e"
     end
     on_intel do
       url "https://github.com/kevin-lee/ai-skills/releases/download/v#{version}/aiskills-linux-x86_64"
-      sha256 "338d8ffcf7c84a4f64e156adbc594e1a1be04610a5362aa3faff4589b44f2536"
+      sha256 "5fdc309c4d98945cc27a13afdbdae7f3ea228b731ef86809a29c8fcaed6e93a6"
     end
   end
 
