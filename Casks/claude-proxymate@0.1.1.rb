@@ -1,9 +1,9 @@
-cask "claude-proxymate" do
+cask "claude-proxymate@0.1.1" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.2"
-  sha256 arm:   "4dd6eb5d3ca7f21b863a516fdfc0357f0185d9ee619c47e9c03f149bdae5370a",
-         intel: "25d9408ab627597876d7beaf0a3362cc09955f15206143079daf54390c75924e"
+  version "0.1.1"
+  sha256 arm:   "969576f047a78192b96be56fa03676061b1bfaffba4f1b0c7b1bdf5388419d87",
+         intel: "47f8364a5596772b5ace5051660ab85dd6ccc832bac0a6bb23398ec8de21247b"
 
   url "https://github.com/kevin-lee/claude-proxymate/releases/download/v#{version}/Claude-Proxy-#{version}-#{arch}.dmg"
   name "Claude Proxymate"
@@ -11,8 +11,7 @@ cask "claude-proxymate" do
   homepage "https://github.com/kevin-lee/claude-proxymate"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "Versioned cask; pinned to 0.1.1"
   end
 
   depends_on macos: :monterey
