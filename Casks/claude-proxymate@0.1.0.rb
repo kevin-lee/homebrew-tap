@@ -11,8 +11,7 @@ cask "claude-proxymate@0.1.0" do
   homepage "https://github.com/kevin-lee/claude-proxymate"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "Versioned cask; pinned to 0.1.0"
   end
 
   depends_on macos: :monterey
