@@ -19,7 +19,7 @@ cask "claude-proxymate@0.1.0" do
   app "Claude Proxymate.app"
 
   zap trash: [
-    "~/Library/Application Support/Claude Proxymate",
+    "~/Library/Application Support/claude-proxymate",
     "~/Library/Caches/io.kevinlee.claudeproxymate.app",
     "~/Library/Caches/io.kevinlee.claudeproxymate.app.ShipIt",
     "~/Library/HTTPStorages/io.kevinlee.claudeproxymate.app",
