@@ -6,28 +6,28 @@ class AiSkills < Formula
   on_macos do
     on_arm do
       on_tahoe :or_newer do
-        url "https://github.com/kevin-lee/ai-skills/releases/download/v2.8.0/aiskills-macos-26-arm64"
-        sha256 "46d5da633ddf7d2b44da13b4adc2b56d57fef2611b4a19328bf1f35ac32cb2f9"
+        url "https://github.com/kevin-lee/ai-skills/releases/download/v2.9.0/aiskills-macos-26-arm64"
+        sha256 "90ffac873fbb32b172fe5b8089e906a247b4dea5a618ffd44d6c0ffb627029b0"
       end
       on_sequoia :or_older do
-        url "https://github.com/kevin-lee/ai-skills/releases/download/v2.8.0/aiskills-macos-15-arm64"
-        sha256 "0f37eb7648a95c38c370316c9269b57cab910f4b933a14bb6966123553401589"
+        url "https://github.com/kevin-lee/ai-skills/releases/download/v2.9.0/aiskills-macos-15-arm64"
+        sha256 "11fdce777def2e3b5865f130e2df37077264fcc7c85697b93e6acb20b5368387"
       end
     end
     on_intel do
-      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.8.0/aiskills-macos-15-intel"
-      sha256 "d18873e69fc6c179eb7b63382383c3c9e3c02430c89b73e68787b4a359f1b283"
+      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.9.0/aiskills-macos-15-intel"
+      sha256 "34b76315025117f7cf589843631a470c823f065685435d51d35ae1b423b4205a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.8.0/aiskills-linux-arm64"
-      sha256 "5f3264849d4c6fb4a33e712c81eef8b3e35a46c1cac0016fb1751d812128cb1b"
+      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.9.0/aiskills-linux-arm64"
+      sha256 "fcf9f41dd82787ddecbe332ab5b79728caffa278bffe84d2c20efd1c28d24fbb"
     end
     on_intel do
-      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.8.0/aiskills-linux-x86_64"
-      sha256 "398f5877d057e1ae5c195c98420098460afe6eedbb35cd8ee1856b639b735dd3"
+      url "https://github.com/kevin-lee/ai-skills/releases/download/v2.9.0/aiskills-linux-x86_64"
+      sha256 "d83456515323cf33cd79756eed9283f4be958e7698fb256f59f97410112b2783"
     end
   end
 
