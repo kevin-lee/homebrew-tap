@@ -19,26 +19,19 @@ cask "claude-proxymate" do
 
   app "Claude Proxymate.app"
 
-  preflight do
-    # Remove the pre-0.3.0 route-mode.json as its format is incompatible with 0.3.0+.
-    caskroom = Pathname("#{HOMEBREW_PREFIX}/Caskroom/claude-proxymate")
-    installed_versions =
-      if caskroom.directory?
-        caskroom.children.select(&:directory?)
-                .map { |dir| dir.basename.to_s }
-                .reject { |basename| basename.start_with?(".") }
-      else
-        []
-      end
-    old_version_installed = installed_versions.any? do |installed_version|
-      Version.new(installed_version) < Version.new("0.3.0")
-    rescue
-      false
+  # Remove the pre-0.3.0 route-mode.json as its format is incompatible with 0.3.0+.
+  preflight_steps do
+    if_path_exists "0.1.0", base: :caskroom_path do
+      remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
-
-    if old_version_installed
-      route_mode = Pathname("#{Dir.home}/Library/Application Support/claude-proxymate/route-mode.json")
-      route_mode.delete if route_mode.exist?
+    if_path_exists "0.1.1", base: :caskroom_path do
+      remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
+    end
+    if_path_exists "0.1.2", base: :caskroom_path do
+      remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
+    end
+    if_path_exists "0.2.0", base: :caskroom_path do
+      remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
   end
 
