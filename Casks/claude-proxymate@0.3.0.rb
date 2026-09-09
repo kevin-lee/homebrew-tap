@@ -1,9 +1,9 @@
-cask "claude-proxymate" do
+cask "claude-proxymate@0.3.0" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.0"
-  sha256 arm:   "e5fb395950fb7d7e41c006f1b1d857f1a53763ce1c9d7501fd68a79fed33a32c",
-         intel: "d511c188aa18512180a091e79c1b80e153522bc52d970283016918fcb8c48f9d"
+  version "0.3.0"
+  sha256 arm:   "afc25afb408669352c1c10d7a206bc887ac04e1e6ae3364d07efc35994e56cbe",
+         intel: "6bb4803b6f4013a032fa9a56c366c40bc86c2273dc3eba1f389f943bedcf2bb9"
 
   url "https://github.com/kevin-lee/claude-proxymate/releases/download/v#{version}/Claude-Proxy-#{version}-#{arch}.dmg"
   name "Claude Proxymate"
@@ -11,8 +11,7 @@ cask "claude-proxymate" do
   homepage "https://github.com/kevin-lee/claude-proxymate"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "Versioned cask; pinned to 0.3.0"
   end
 
   depends_on macos: :monterey
@@ -20,17 +19,18 @@ cask "claude-proxymate" do
   app "Claude Proxymate.app"
 
   # Remove the pre-0.3.0 route-mode.json as its format is incompatible with 0.3.0+.
+  # The unversioned cask is checked because this cask's own caskroom_path only ever holds 0.3.0.
   preflight_steps do
-    if_path_exists "0.1.0", base: :caskroom_path do
+    if_path_exists "Caskroom/claude-proxymate/0.1.0", base: :homebrew_prefix do
       remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
-    if_path_exists "0.1.1", base: :caskroom_path do
+    if_path_exists "Caskroom/claude-proxymate/0.1.1", base: :homebrew_prefix do
       remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
-    if_path_exists "0.1.2", base: :caskroom_path do
+    if_path_exists "Caskroom/claude-proxymate/0.1.2", base: :homebrew_prefix do
       remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
-    if_path_exists "0.2.0", base: :caskroom_path do
+    if_path_exists "Caskroom/claude-proxymate/0.2.0", base: :homebrew_prefix do
       remove "Library/Application Support/claude-proxymate/route-mode.json", base: :home
     end
   end
