@@ -4,15 +4,16 @@ Homebrew formulae for tools by [kevin-lee](https://github.com/kevin-lee).
 
 ## Available Formulae
 
-| Formula | Description |
-|---|---|
+| Formula     | Description                                                         |
+|-------------|---------------------------------------------------------------------|
 | `ai-skills` | CLI tool for managing AI coding agent skills across multiple agents |
 
 ## Available Casks
 
-| Cask | Description |
-|---|---|
-| `claude-proxymate` | Proxy app to analyze Claude Code's live traffic |
+| Cask               | Description                                                  |
+|--------------------|--------------------------------------------------------------|
+| `claude-proxymate` | Proxy app to analyze Claude Code's live traffic              |
+| `token-watchroo`   | Menubar app that watches Claude Code and Codex usage windows |
 
 ## Installation
 
@@ -49,6 +50,7 @@ aiskills --help
 
 - **ai-skills:** macOS (Apple Silicon / ARM64), Linux (ARM64, x86_64)
 - **claude-proxymate:** macOS (Apple Silicon / ARM64, Intel / x86_64)
+- **token-watchroo:** macOS 14 or later (Apple Silicon / ARM64, Intel / x86_64)
 
 ### Update
 
@@ -105,8 +107,51 @@ To also remove app preferences and caches:
 brew uninstall --zap --cask claude-proxymate
 ```
 
+### token-watchroo
+
+Install directly (taps automatically):
+
+```sh
+brew install --cask kevin-lee/tap/token-watchroo
+```
+
+Or tap first, then install:
+
+```sh
+brew tap kevin-lee/tap
+brew install --cask token-watchroo
+```
+
+Or in a `Brewfile`:
+
+```ruby
+tap "kevin-lee/tap"
+cask "token-watchroo"
+```
+
+After installation, **Token Watchroo** is available in `/Applications`. It runs in the menubar, not in the Dock, and shows how much of each Claude Code and Codex usage window you have used. It reads the credentials the `claude` and `codex` CLIs already store, so sign in to at least one of them on this machine first. The app is notarized, so it opens without a Gatekeeper prompt.
+
+#### Update
+
+```sh
+brew upgrade --cask token-watchroo
+```
+
+#### Uninstall
+
+```sh
+brew uninstall --cask token-watchroo
+```
+
+To also remove the app state, preferences, and caches:
+
+```sh
+brew uninstall --zap --cask token-watchroo
+```
+
 ## Documentation
 
 - **ai-skills:** [https://github.com/kevin-lee/ai-skills](https://github.com/kevin-lee/ai-skills)
 - **claude-proxymate:** [https://github.com/kevin-lee/claude-proxymate](https://github.com/kevin-lee/claude-proxymate)
+- **token-watchroo:** [https://github.com/kevin-lee/token-watchroo](https://github.com/kevin-lee/token-watchroo)
 - **Homebrew:** `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh)
