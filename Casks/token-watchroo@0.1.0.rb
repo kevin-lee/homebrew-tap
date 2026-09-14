@@ -1,9 +1,9 @@
-cask "token-watchroo" do
+cask "token-watchroo@0.1.0" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.1"
-  sha256 arm:   "2c72a20c31cd4b8cf664bfff9f636cb62872ea7533c9469dbdae8c9775fb686b",
-         intel: "b8127447a1fbf451538e2e2f5ee8eef573c5c8db67d7169e775ebd5c18a89e51"
+  version "0.1.0"
+  sha256 arm:   "347b63d3328561d6ea2739ae51533f5e8506b3f60aef81a432b62f0d264ba667",
+         intel: "939f2a9d869fb84d5f01b04da4ef8db90aa0df2b55ebc60680cc329a42972daa"
 
   url "https://github.com/kevin-lee/token-watchroo/releases/download/v#{version}/Token-Watchroo-#{version}-#{arch}.dmg"
   name "Token Watchroo"
@@ -11,8 +11,7 @@ cask "token-watchroo" do
   homepage "https://github.com/kevin-lee/token-watchroo"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "Versioned cask; pinned to 0.1.0"
   end
 
   depends_on macos: :sonoma
