@@ -1,9 +1,9 @@
 cask "token-watchroo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.2"
-  sha256 arm:   "77cddc6ddbc42dd60f66c4cf52f3d199d98e56bfab9d48cd10f91f1a9479c5f0",
-         intel: "6d6c00460033849d01684719ff4865d7acb9be89490224e12d77cf81aafebaae"
+  version "0.2.0"
+  sha256 arm:   "98c7fc4149bef90c7db8ced1e2efc6241de771f93eb421fe5cba43e7d3091968",
+         intel: "13a7b2235dac40ea9234b490b6105059228e510f6114231a735435c0c678c450"
 
   url "https://github.com/kevin-lee/token-watchroo/releases/download/v#{version}/Token-Watchroo-#{version}-#{arch}.dmg"
   name "Token Watchroo"
@@ -15,6 +15,7 @@ cask "token-watchroo" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Token Watchroo.app"
