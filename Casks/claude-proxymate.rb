@@ -1,9 +1,9 @@
 cask "claude-proxymate" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.7.0"
-  sha256 arm:   "c4c34dad13d21356efe099ae7ddfe09ad3062a9df6cd1f5c9358b392b5e5eaec",
-         intel: "e8ef76d7fbcfaa281a4c1b059d1c18333371ab5caeb75e7ae33dcfbdab10039b"
+  version "0.8.0"
+  sha256 arm:   "63b6d0fbec750ca5420a1e84bb118bf03d74cc4f13368c0582e46413719c7129",
+         intel: "22f5dd5638db0ea753750927efdddfccd40748f529e422f70ed8b028200661f8"
 
   url "https://github.com/kevin-lee/claude-proxymate/releases/download/v#{version}/Claude-Proxy-#{version}-#{arch}.dmg"
   name "Claude Proxymate"
@@ -15,6 +15,7 @@ cask "claude-proxymate" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: :monterey
 
   app "Claude Proxymate.app"
