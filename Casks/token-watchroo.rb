@@ -1,9 +1,9 @@
 cask "token-watchroo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.0"
-  sha256 arm:   "98c7fc4149bef90c7db8ced1e2efc6241de771f93eb421fe5cba43e7d3091968",
-         intel: "13a7b2235dac40ea9234b490b6105059228e510f6114231a735435c0c678c450"
+  version "0.2.1"
+  sha256 arm:   "c2ca6c1d79fdbab0f038eb1e20b831264e120b54353b85652f3eaf8dbb0763f7",
+         intel: "264fa04c905a60c93383305eb45f57d2bf087e1fd0c46ef24afdcbd86d241e86"
 
   url "https://github.com/kevin-lee/token-watchroo/releases/download/v#{version}/Token-Watchroo-#{version}-#{arch}.dmg"
   name "Token Watchroo"
