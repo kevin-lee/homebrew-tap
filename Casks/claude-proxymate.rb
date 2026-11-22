@@ -1,9 +1,9 @@
 cask "claude-proxymate" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.1"
-  sha256 arm:   "3f28f364f79c3bf69288ef32106f22cbd553fa7016844cd954a2e9b94efac1db",
-         intel: "bef5c275a84a3e17c4c04e2ac95de04f5b3e20c1c071bc0555c5d8ae856fe178"
+  version "0.8.2"
+  sha256 arm:   "3e659968c40c611646aa6417a73fc0dd9a4edd243ea3e08c3a0c012af6a5beff",
+         intel: "2edd1e73a325ba8eb85169b82a14d8e7fdee6c394f6b1c102b1eae993fb31b16"
 
   url "https://github.com/kevin-lee/claude-proxymate/releases/download/v#{version}/Claude-Proxy-#{version}-#{arch}.dmg"
   name "Claude Proxymate"
